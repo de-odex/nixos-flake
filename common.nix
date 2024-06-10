@@ -114,6 +114,8 @@ with lib;
         extraConfig = ''
           Host eu.nixbuild.net
             PubkeyAcceptedKeyTypes ssh-ed25519
+            ServerAliveInterval 60
+            IPQoS throughput
             IdentityFile ${config.sops.secrets.nixbuild-ssh-key.path}
         '';
         knownHosts = {
