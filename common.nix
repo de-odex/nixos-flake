@@ -13,6 +13,7 @@ with lib;
       optimise.automatic = true;
       extraOptions = ''
         extra-experimental-features = nix-command flakes
+        builders-use-substitutes = true
       '';
       settings = {
         trusted-public-keys = [ "" ];
@@ -21,6 +22,7 @@ with lib;
       buildMachines = [
         { hostName = "eu.nixbuild.net";
           system = "x86_64-linux";
+          protocol = "ssh-ng";
           maxJobs = 100;
           supportedFeatures = [ "benchmark" "big-parallel" ];
         }
