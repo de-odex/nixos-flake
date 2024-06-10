@@ -85,7 +85,7 @@ with lib;
     # };
 
     environment.systemPackages = with pkgs; [
-      kitty.terminfo
+      # kitty.terminfo
       # (pkgs.kitty.overrideAttrs (old: {
       #  meta = old.meta // {
       #    outputsToInstall = [ "terminfo" ];
