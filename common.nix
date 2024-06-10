@@ -134,7 +134,7 @@ with lib;
 
     users.users = {
       root = {
-        passwordFile = config.sops.secrets."users/root".path;
+        hashedPasswordFile = config.sops.secrets."users/root".path;
         # openssh.authorizedKeys.keys = [
         #   "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKhRH3yiUZJz2AF+kmgaC5FOHwxwYr/qnuUkTSfWXmlE desktop.private"
         # ];
@@ -144,7 +144,7 @@ with lib;
         isNormalUser = true;
         extraGroups = [ "wheel" ];
         shell = pkgs.fish;
-        passwordFile = config.sops.secrets."users/deodex".path;
+        hashedPasswordFile = config.sops.secrets."users/deodex".path;
         openssh.authorizedKeys.keys = [
           "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKhRH3yiUZJz2AF+kmgaC5FOHwxwYr/qnuUkTSfWXmlE desktop.private"
         ];

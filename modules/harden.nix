@@ -35,7 +35,7 @@ in {
 
     # sshd
     services.openssh = {
-      passwordAuthentication = false;
+      settings.PasswordAuthentication = false;
       extraConfig = ''
         AllowTcpForwarding yes
         X11Forwarding no

@@ -32,7 +32,6 @@ in {
     # configure grub
     boot.loader.grub = {
       enable = true;
-      version = 2;
       forceInstall = true;
       device = "/dev/vda";
     };

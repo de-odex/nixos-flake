@@ -38,7 +38,6 @@ in {
 
     # configure grub
     boot.loader.grub.enable = true;
-    boot.loader.grub.version = 2;
     boot.loader.grub.forceInstall = true;
     boot.loader.grub.device = "nodev";
     boot.loader.timeout = 10;
